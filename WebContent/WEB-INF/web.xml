@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<error-page>
+		<!-- 方式一 -->
+<!-- 		<error-code>500</error-code> -->
+		<!-- 方式二 -->
+		<exception-type>javax.servlet.ServletException</exception-type>
+		<location>/error.html</location>
+	</error-page>
+	
+	<servlet>
+		<servlet-name>addEmpServlet</servlet-name>
+		<servlet-class>web.AddEmpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>addEmpServlet</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>listEmp</servlet-name>
+		<servlet-class>web.ListEmpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>listEmp</servlet-name>
+		<url-pattern>/list</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>delEmp</servlet-name>
+		<servlet-class>web.DelEmpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>delEmp</servlet-name>
+		<url-pattern>/del</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>loadEmp</servlet-name>
+		<servlet-class>web.LoadEmpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>loadEmp</servlet-name>
+		<url-pattern>/load</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>modifyEmp</servlet-name>
+		<servlet-class>web.ModifyEmpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>modifyEmp</servlet-name>
+		<url-pattern>/modify</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>
